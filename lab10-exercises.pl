@@ -155,7 +155,7 @@ partition(cons(E, L), L1, cons(E, L2)) :- \+ greater(E, zero), partition(L, L1, 
 
 % reversed(List, ReversedList) where ReversedList contains the elements of List in reversed order
 reversed(nil, nil).
-reversed(cons(E1, L1), R) :- reversed(L1, Acc), last(Acc, _, R).
+reversed(cons(E1, L1), R) :- reversed(L1, Acc), last(Acc, E1, R).
 % ?- reversed(cons(s(zero), cons(zero, nil)), cons(zero, cons(s(zero), nil))). yes.
 
 % take(List, N, TakenList) where TakenList contains the first N elements of List
